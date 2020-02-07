@@ -40,10 +40,6 @@ public class Aquarium extends GFX {
 		// Don't change this here, edit the variables instead.
 		super(WIDTH, HEIGHT);
 	}
-
-	int fish1X = getWidth() + 100;
-	int fish2X = getWidth() - 300;
-	int fish3X = getWidth() - 100;
 	
 	Fish nemo = new Fish(Color.MAGENTA, 250, 250, true, true);
 	Fish marlin = new Fish(Color.orange, 100, 100, false, false);
@@ -54,19 +50,12 @@ public class Aquarium extends GFX {
 		g.setColor(Color.blue);
 		g.fillRect(0, 0, getWidth(), getHeight());
 		
+		// Draw the fish.
 		nemo.draw(g);
 		marlin.draw(g);
 
-//		Fish.fish(g, Color.orange, 100, 200, true);
-//		Fish.fish(g, Color.orange, 100, 400, false);
-
 		// Draw our snail!
 		algorithm.draw(g);
-
-		// Move the fish!
-		fish1X -= 1;
-		fish2X += 2;
-		fish3X -= 1;
 	}
 
 	public static void main(String[] args) {
